@@ -1,0 +1,18 @@
+{
+  "eslint.enable": true,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "eslint.validate": [
+    "vue",
+    "javascript",
+    "jsx"
+  ],
+  "editor.rulers": [
+    140
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2
+}
