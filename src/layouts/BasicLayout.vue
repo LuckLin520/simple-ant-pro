@@ -14,11 +14,13 @@
       </div>
     </template>
 
-    <setting-drawer :class="{ isProd }" :settings="settings" @change="handleSettingChange">
-      <div style="margin: 12px 0">您可以在此自定义设置主题色和菜单风格</div>
+    <setting-drawer :settings="settings" @change="handleSettingChange">
+      <div style="margin: 12px 0">
+        <a-button type="primary" block @click="$store.dispatch('common/resetSetting')">重置</a-button>
+      </div>
     </setting-drawer>
     <template v-slot:rightContentRender>
-      <right-content :top-menu="false" :is-mobile="false" :theme="settings.theme" />
+      <!-- <right-content :top-menu="false" :is-mobile="false" :theme="settings.theme" /> -->
     </template>
     <!-- custom footer / 自定义Footer -->
     <template v-slot:footerRender>
@@ -131,18 +133,24 @@ export default {
   display: none;
 }
 .ant-drawer {
-  &.isProd {
-    .ant-pro-setting-drawer-content {
-      .ant-alert-warning,
-      .ant-btn-block {
-        display: none;
-      }
+  .ant-pro-setting-drawer-content {
+    .ant-alert-warning {
+      display: none;
     }
+    // .ant-btn-block:nth-child(1) {
+    //   display: none;
+    // }
   }
 
+  // 设置按钮大小
   .ant-pro-setting-drawer-handle {
     width: 24px;
     height: 24px;
+  }
+
+  // vue2不支持暗黑模式
+  .ant-pro-setting-drawer-block-checbox-item:nth-child(3) {
+    display: none;
   }
 }
 </style>

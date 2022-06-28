@@ -1,8 +1,8 @@
 const plugins = []
-if (process.env.NODE_ENV === 'production') {
-  // 去除日志的插件，
-  plugins.push('transform-remove-console')
-}
+// if (process.env.NODE_ENV === 'production') {
+//   // 去除日志的插件，
+//   plugins.push('transform-remove-console')
+// }
 
 // lazy load ant-design-vue
 // if your use import on Demand, Use this code

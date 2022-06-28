@@ -9,19 +9,7 @@
  * contentWidth - 内容区布局： 流式 |  固定
  *
  */
-import storage from 'store'
-// export default {
-//   theme: 'dark',
-//   primaryColor: '#06A17E',
-//   layout: 'sidemenu',
-//   contentWidth: 'Fluid',
-//   fixedHeader: false,
-//   fixSiderbar: false,
-//   colorWeak: false,
-//   hideHintAlert: false,
-//   hideCopyButton: false
-// }
-storage.set('settings', {
+export default {
   theme: 'dark',
   primaryColor: '#06A17E',
   layout: 'sidemenu',
@@ -31,4 +19,4 @@ storage.set('settings', {
   colorWeak: false,
   hideHintAlert: false,
   hideCopyButton: false
-})
+}

@@ -1,13 +1,10 @@
 import storage from 'store'
 import { updateTheme } from '@ant-design-vue/pro-layout'
-// import defaultSettings from '@/config/defaultSettings'
-// const settings = storage.get('settings') || defaultSettings
-const settings = storage.get('settings')
-updateTheme(settings.primaryColor)
+import defaultSetting from '@/config/defaultSetting'
 export default {
   namespaced: true,
   state: {
-    settings
+    settings: {}
   },
   mutations: {
     save(state, payload) {
@@ -18,8 +15,12 @@ export default {
   },
   actions: {
     saveSettings(store, payload) {
-      store.commit('save', payload)
+      store.commit('save', { settings: payload })
       storage.set('settings', payload)
+    },
+    resetSetting(store) {
+      store.dispatch('saveSettings', defaultSetting)
+      updateTheme(defaultSetting.primaryColor)
     }
   }
 }
