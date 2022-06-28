@@ -1,0 +1,64 @@
+{
+  "name": "vue-antd-pro",
+  "version": "3.0.2",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "serve:beta": "vue-cli-service serve --mode beta",
+    "serve:preview": "vue-cli-service serve --mode preview",
+    "serve:production": "vue-cli-service serve --mode production",
+    "build": "vue-cli-service build",
+    "build:beta": "vue-cli-service build --mode beta",
+    "build:development": "vue-cli-service build --mode development",
+    "build:preview": "vue-cli-service build --mode preview",
+    "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
+    "lint:fix": "eslint --fix --ext .js,.ts,.vue --ignore-path .gitignore .",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@ant-design-vue/pro-layout": "^1.0.11",
+    "ant-design-vue": "^1.7.8",
+    "axios": "^0.26.1",
+    "mockjs2": "1.0.8",
+    "moment": "^2.29.3",
+    "nprogress": "^0.2.0",
+    "store": "^2.0.12",
+    "vue": "^2.6.14",
+    "vue-i18n": "8.27.1",
+    "vue-router": "^3.5.3",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@vue/babel-helper-vue-jsx-merge-props": "^1.2.1",
+    "@vue/cli-plugin-babel": "^4.5.17",
+    "@vue/cli-plugin-router": "^4.5.17",
+    "@vue/cli-plugin-vuex": "^4.5.17",
+    "@vue/cli-service": "^4.5.17",
+    "babel-plugin-import": "^1.13.3",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^9.1.1",
+    "husky": "^7.0.0",
+    "less": "^3.13.1",
+    "less-loader": "^5.0.0",
+    "lint-staged": "^13.0.1",
+    "prettier": "^2.6.2",
+    "vue-template-compiler": "^2.6.14",
+    "webpack-theme-color-replacer": "^1.4.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "yarn lint:fix",
+      "git add ."
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}
