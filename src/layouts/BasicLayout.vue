@@ -20,7 +20,7 @@
       </div>
     </setting-drawer>
     <template v-slot:rightContentRender>
-      <!-- <right-content :top-menu="false" :is-mobile="false" :theme="settings.theme" /> -->
+      <right-content :top-menu="false" :is-mobile="false" :theme="settings.theme" />
     </template>
     <!-- custom footer / 自定义Footer -->
     <template v-slot:footerRender>
