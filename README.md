@@ -3,12 +3,7 @@
     根据强大且完善的Ant Design Vue Pro简化而来<a href="https://github.com/vueComponent/ant-design-vue-pro" target="_blank">Ant Design Vue Pro</a>
 </div>
 
-- 预览: https://preview.pro.antdv.com
-- 首页: https://pro.antdv.com
-- 文档: https://pro.antdv.com/docs/getting-started
-- 更新日志: https://pro.antdv.com/docs/changelog
-- 常见问题: https://pro.antdv.com/docs/faq
-- Vue3 ProLayout: https://github.com/vueComponent/pro-layout
+- plus分支基于master增加SettingDrawer并基于官方的做了优化
 
 
 运行
@@ -39,6 +34,6 @@ yarn run lint
 
 - 去除国际化
 - 去除特例业务逻辑，清除不常用组件和demo页面，简化代码
-- 去除主题切换组件
+- 去除SettingDrawer主题风格切换组件
 - vuex最简化
 
